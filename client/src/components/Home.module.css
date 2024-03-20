@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #f0f0f0; /* Светлый цвет текста для контраста */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(135deg, #57a0ee 0%, #6fc6ff 100%);
+  background-size: 200% 200%;
+  animation: GradientShift 15s ease infinite;
+}
+
+@keyframes GradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Добавляем сложность с помощью множественных градиентов и анимации */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #57a0ee 0%, #6fc6ff 100%);
+  background-size: 200% 200%;
+  animation: GradientShiftReverse 30s ease infinite;
+  z-index: -1;
+  opacity: 0.7;
+  filter: blur(10px);
+}
+
+@keyframes GradientShiftReverse {
+  0% { background-position: 100% 0%; }
+  50% { background-position: 0% 100%; }
+  100% { background-position: 100% 0%; }
+}
+
+
+
+/* Общие стили контейнера */
+.container {
+  background-image: linear-gradient(135deg, #57a0ee 0%, #6fc6ff 100%);
+  color: #000000; /* Белый текст для лучшего контраста */
+  padding: 20px;
+  border-radius: 12px; /* Скругление углов */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Глубокая тень для 3D эффекта */
+  text-align: center;
+  margin: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Плавный переход для трансформации и тени */
+}
+
+.container:hover {
+  transform: translateY(-10px); /* Поднимаем контейнер при наведении */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Увеличиваем тень для эффекта приподнятости */
+}
+
+
+
+
+/* Стилизация заголовков блоков */
+.blockTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Стилизация значений в блоках */
+.blockValue {
+  font-size: 28px; /* Увеличиваем размер шрифта для большей выразительности */
+  color: #000000; /* Синий цвет для подчёркивания важности значений */
+  font-weight: 600; /* Делаем текст немного более жирным */
+  text-align: center; /* Выравнивание текста по центру */
+  margin: 10px 0; /* Добавляем верхний и нижний отступы */
+  background-color: #f0f8ff; /* Светлый фоновый цвет для выделения */
+  border-radius: 5px; /* Скругление углов для более мягкого вида */
+  padding: 10px; /* Внутренние отступы для добавления пространства вокруг текста */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Небольшая тень для создания эффекта глубины */
+}
+
+
+/* Стили для ряда, содержащего графики и информационные блоки */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+/* Стили для блоков с графиками и информацией */
+.p2, .smallerBlock {
+  flex: 0 0 50%; /* Каждый элемент занимает половину ширины экрана */
+  padding: 10px;
+}
+
+.smallBlock {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.graph {
+  width: 100%; /* График занимает всю ширину контейнера */
+  height: 400px; /* Задаём фиксированную высоту для графиков */
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Стили для текста и кнопок */
+.textPrimary {
+  color: #ffffff; /* Белый цвет текста для лучшего контраста */
+  background-color: #4fc799; /* Тёмно-синий фон */
+  padding: 10px 20px; /* Увеличенный отступ для более крупного вида */
+  border-radius: 10px; /* Увеличенное скругление углов */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Более глубокая тень для 3D эффекта */
+  text-align: center;
+  font-size: 18px; /* Увеличенный размер шрифта для лучшей видимости */
+  font-weight: bold; /* Жирное начертание для выделения */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Светлая рамка для дополнительного акцента */
+  transition: all 0.3s ease; /* Плавный переход для интерактивности */
+}
+
+.textPrimary:hover {
+  background-color: #255a8d; /* Темнее фон при наведении */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Увеличенная тень для эффекта приподнятия */
+}
+
+
+.fwBold {
+  font-weight: bold;
+}
+
+.btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  .p2, .smallerBlock {
+    flex: 0 0 100%; /* На малых экранах каждый элемент занимает 100% ширины */
+  }
+}

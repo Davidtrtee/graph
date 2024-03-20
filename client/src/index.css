@@ -1,0 +1,62 @@
+:root{
+  --color-dark-green:#4CAF50;
+  --color-red:#f44336;
+  --color-dark-blue:#008CBA;
+  --color-cyan:#ff6384;
+  --color-transprent-blue:#36a2eb;
+  --color-dark-cyan:#ff63859b;
+  --color-light-green:#28a7469b;
+  --color-transperent-dark-blue:#36a2eb9b;
+  --color-light-yellow:#ffaa009b;
+}
+.btn-blue{
+  background-color: var(--color-dark-blue) !important;
+  color: rgb(84, 41, 240) !important; 
+  border: 2px solid var(--color-dark-blue) !important;
+}
+.btn-red{
+  background-color: var(--color-red) !important;
+  color: white !important; 
+  border: 2px solid var(--color-red) !important;
+}
+.btn-green{
+  background-color: var(--color-dark-green) !important;
+  color: white !important; 
+  border:  2px solid var(--color-dark-green) !important;
+}
+.btn-blue:hover{
+  color: var(--color-dark-blue) !important;
+  background-color: rgb(146, 34, 252) !important; 
+  border: 2px solid var(--color-dark-blue) !important;
+}
+.btn-red:hover{
+ color: var(--color-red) !important;
+ background-color: rgb(22, 13, 153) !important; 
+  border: 2px solid var(--color-red) !important;
+}
+.btn-green:hover{
+  color: var(--color-dark-green) !important;
+  background: rgb(23, 20, 201) !important; 
+  border:  2px solid var(--color-dark-green) !important;
+}
+.box-shadow{
+  box-shadow: 0px 0px 3px gray;
+}
+
+.dashboard{
+  background: #2c71d887;
+}
+.label-text{
+  font-size: 14px;
+}
+/* В файле styles.css */
+.smaller-block h5 {
+  font-size: 0.9rem;
+}
+
+.smaller-block {
+  padding: 10px;
+  margin: 10px 0;
+}
+/* В файле index.css */
+

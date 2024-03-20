@@ -1,0 +1,14 @@
+.dashboard {
+    background-image: url('https://i.imgur.com/nny2dFo.jpeg'); /* Укажите путь к вашему фоновому изображению */
+    background-size: cover; /* Покрытие всего доступного пространства */
+    background-position: center; /* Центрирование изображения */
+  }
+  .dashboardLink {
+    text-decoration: none;
+    color: rgb(6, 93, 255);
+    background-color: #ffffff00;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  

@@ -1,0 +1,72 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 40px; /* Отступ сверху для всего контейнера */
+  background: linear-gradient(-45deg, #ff9a9e 0%, #fecfef 50%, #fe9a8b 100%);
+}
+
+.loginTitle {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 28px;
+  color: #000000; /* Для лучшего контраста на градиентном фоне */
+  font-weight: 600;
+}
+
+.formGroup {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 10px;
+  color: #000000;
+  font-size: 16px;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  background: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.formGroup input:focus {
+  border-color: #2575fc;
+  outline: none;
+}
+
+.loginBtn {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  background-image: linear-gradient(45deg, #2575fc 0%, #6a11cb 100%);
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.loginBtn:hover {
+  background-image: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

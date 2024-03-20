@@ -1,0 +1,13 @@
+.popup{
+    position: fixed;
+    min-height: 100vh;
+    width: 100vw;
+    background-color:#0000003b;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.popup #model-body{
+    margin: auto;
+}

@@ -1,0 +1,20 @@
+
+  .smallerBlock {
+    padding: -6rem; /* Уменьшаем padding для уменьшения внутреннего пространства */
+    margin: 0rem auto; /* Уменьшаем margin и центрируем блок */
+    max-width: -4px; /* Устанавливаем максимальную ширину блока */
+    text-align: center;
+    background-color: rgb(241, 241, 241);
+    border-radius: 5rem;
+    
+  }
+  /* Component.module.css */
+
+  
+  .smallerText {
+    font-size: 1.2rem; /* уменьшенный размер текста */
+  }
+  /* Component.module.css */
+.blockMargin {
+  margin: 1rem 2rem; /* Устанавливаем верхний и нижний отступы в 1rem и левый и правый в 2rem */
+}
