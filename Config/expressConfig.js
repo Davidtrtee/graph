@@ -6,22 +6,14 @@ const Router = require("../Route/AllRouter");
 dotenv.config();
 const app = express();
 
-const allowedOrigins = [
-  "http://localhost:3000",
-  "http://185.124.109.241",
-  "https://cosmo-portal.digital",
-  "http://cosmo-portal.digital", // Added http version without 's'
-];
-
-// Configure CORS options
-const corsOptions = {
-  origin: "*",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
-};
-
-// Use CORS middleware
-app.use(cors(corsOptions));
+// Allow requests from specific origin
+app.use(
+  cors({
+    origin: "http://185.124.109.241",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../client/build")));
