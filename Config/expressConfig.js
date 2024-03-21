@@ -9,7 +9,11 @@ const app = express();
 // Allow requests from specific origin
 app.use(
   cors({
-    origin: "http://185.124.109.241",
+    origin: [
+      "http://185.124.109.241",
+      "185.124.109.241",
+      "https://185.124.109.241",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
