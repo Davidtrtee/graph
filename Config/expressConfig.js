@@ -9,10 +9,13 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://185.124.109.241/",
-      "www.cosmo-portal.digital",
+      "http://localhost:3000",
+      "http://185.124.109.241",
+      "https://cosmo-portal.digital",
       "cosmo-portal.digital",
     ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
 );
 app.use(express.json());
