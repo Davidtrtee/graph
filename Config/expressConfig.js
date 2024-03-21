@@ -10,9 +10,9 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://185.124.109.241",
-      "185.124.109.241",
-      "https://185.124.109.241",
+      "http://185.124.109.241:80",
+      "185.124.109.241:80",
+      "https://185.124.109.241:80",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
