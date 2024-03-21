@@ -2,23 +2,32 @@ name: Node.js CI
 
 on:
   push:
-    branch: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: self-hosted
 
-  steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{matrix.node-version}}
-    uses:actions/setup-node@v1
-     with:
-      node-version: ${{matrix.node-varsion}}
-    - run:
-        npm i
-        cd client
-        npm i 
-        npm run build
-  
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
 
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Dependencies and Build
+        run: |
+          npm install
+          cd client
+          npm install
+          npm run build
